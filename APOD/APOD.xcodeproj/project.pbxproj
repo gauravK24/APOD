@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		337CA6042856649300170DE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA6032856649300170DE8 /* AppDelegate.swift */; };
 		337CA6062856649300170DE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA6052856649300170DE8 /* SceneDelegate.swift */; };
-		337CA6082856649300170DE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA6072856649300170DE8 /* ViewController.swift */; };
-		337CA60B2856649300170DE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337CA6092856649300170DE8 /* Main.storyboard */; };
 		337CA60D2856649500170DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337CA60C2856649500170DE8 /* Assets.xcassets */; };
 		337CA6102856649500170DE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337CA60E2856649500170DE8 /* LaunchScreen.storyboard */; };
 		337CA61B2856649600170DE8 /* APODTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA61A2856649600170DE8 /* APODTests.swift */; };
 		337CA6252856649600170DE8 /* APODUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA6242856649600170DE8 /* APODUITests.swift */; };
 		337CA6272856649600170DE8 /* APODUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA6262856649600170DE8 /* APODUITestsLaunchTests.swift */; };
+		337CA637285671BE00170DE8 /* AstronomyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA636285671BE00170DE8 /* AstronomyInfo.swift */; };
+		337CA639285671DA00170DE8 /* AstronomyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA638285671DA00170DE8 /* AstronomyRouter.swift */; };
+		337CA63B285671E900170DE8 /* AstronomyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA63A285671E900170DE8 /* AstronomyPresenter.swift */; };
+		337CA63D285671F900170DE8 /* AstronomyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA63C285671F900170DE8 /* AstronomyInteractor.swift */; };
+		337CA63F2856720E00170DE8 /* AstronomyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA63E2856720E00170DE8 /* AstronomyViewController.swift */; };
+		337CA6412856722800170DE8 /* AstronomyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 337CA6402856722800170DE8 /* AstronomyViewController.xib */; };
+		337CA644285674D900170DE8 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA643285674D900170DE8 /* LoadingViewController.swift */; };
+		337CA6492856756400170DE8 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA6482856756400170DE8 /* ViewControllerFactory.swift */; };
+		337CA64B2856757800170DE8 /* InteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA64A2856757800170DE8 /* InteractorFactory.swift */; };
+		337CA64E2856758F00170DE8 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA64D2856758F00170DE8 /* BaseInteractor.swift */; };
+		337CA651285676EF00170DE8 /* UIViewController+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA650285676EF00170DE8 /* UIViewController+Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +48,6 @@
 		337CA6002856649300170DE8 /* APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		337CA6032856649300170DE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		337CA6052856649300170DE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		337CA6072856649300170DE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		337CA60A2856649300170DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		337CA60C2856649500170DE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		337CA60F2856649500170DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		337CA6112856649500170DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,17 @@
 		337CA6202856649600170DE8 /* APODUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APODUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		337CA6242856649600170DE8 /* APODUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODUITests.swift; sourceTree = "<group>"; };
 		337CA6262856649600170DE8 /* APODUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		337CA636285671BE00170DE8 /* AstronomyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInfo.swift; sourceTree = "<group>"; };
+		337CA638285671DA00170DE8 /* AstronomyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyRouter.swift; sourceTree = "<group>"; };
+		337CA63A285671E900170DE8 /* AstronomyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPresenter.swift; sourceTree = "<group>"; };
+		337CA63C285671F900170DE8 /* AstronomyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInteractor.swift; sourceTree = "<group>"; };
+		337CA63E2856720E00170DE8 /* AstronomyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyViewController.swift; sourceTree = "<group>"; };
+		337CA6402856722800170DE8 /* AstronomyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AstronomyViewController.xib; sourceTree = "<group>"; };
+		337CA643285674D900170DE8 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		337CA6482856756400170DE8 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		337CA64A2856757800170DE8 /* InteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorFactory.swift; sourceTree = "<group>"; };
+		337CA64D2856758F00170DE8 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		337CA650285676EF00170DE8 /* UIViewController+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Bundle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,10 @@
 		337CA6022856649300170DE8 /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				337CA6422856723F00170DE8 /* Common */,
+				337CA6332856718B00170DE8 /* Feature */,
 				337CA6032856649300170DE8 /* AppDelegate.swift */,
 				337CA6052856649300170DE8 /* SceneDelegate.swift */,
-				337CA6072856649300170DE8 /* ViewController.swift */,
-				337CA6092856649300170DE8 /* Main.storyboard */,
 				337CA60C2856649500170DE8 /* Assets.xcassets */,
 				337CA60E2856649500170DE8 /* LaunchScreen.storyboard */,
 				337CA6112856649500170DE8 /* Info.plist */,
@@ -125,6 +143,79 @@
 				337CA6262856649600170DE8 /* APODUITestsLaunchTests.swift */,
 			);
 			path = APODUITests;
+			sourceTree = "<group>";
+		};
+		337CA6332856718B00170DE8 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				337CA6342856719B00170DE8 /* Model */,
+				337CA635285671A200170DE8 /* Core */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		337CA6342856719B00170DE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				337CA636285671BE00170DE8 /* AstronomyInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		337CA635285671A200170DE8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				337CA638285671DA00170DE8 /* AstronomyRouter.swift */,
+				337CA63A285671E900170DE8 /* AstronomyPresenter.swift */,
+				337CA63C285671F900170DE8 /* AstronomyInteractor.swift */,
+				337CA63E2856720E00170DE8 /* AstronomyViewController.swift */,
+				337CA6402856722800170DE8 /* AstronomyViewController.xib */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		337CA6422856723F00170DE8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				337CA64F285676D400170DE8 /* Extension */,
+				337CA64C2856758200170DE8 /* Base */,
+				337CA6462856754600170DE8 /* Factory */,
+				337CA6452856753800170DE8 /* Loader */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		337CA6452856753800170DE8 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				337CA643285674D900170DE8 /* LoadingViewController.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		337CA6462856754600170DE8 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				337CA6482856756400170DE8 /* ViewControllerFactory.swift */,
+				337CA64A2856757800170DE8 /* InteractorFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		337CA64C2856758200170DE8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				337CA64D2856758F00170DE8 /* BaseInteractor.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		337CA64F285676D400170DE8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				337CA650285676EF00170DE8 /* UIViewController+Bundle.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +324,7 @@
 			files = (
 				337CA6102856649500170DE8 /* LaunchScreen.storyboard in Resources */,
 				337CA60D2856649500170DE8 /* Assets.xcassets in Resources */,
-				337CA60B2856649300170DE8 /* Main.storyboard in Resources */,
+				337CA6412856722800170DE8 /* AstronomyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +349,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				337CA6082856649300170DE8 /* ViewController.swift in Sources */,
+				337CA639285671DA00170DE8 /* AstronomyRouter.swift in Sources */,
+				337CA6492856756400170DE8 /* ViewControllerFactory.swift in Sources */,
+				337CA64B2856757800170DE8 /* InteractorFactory.swift in Sources */,
 				337CA6042856649300170DE8 /* AppDelegate.swift in Sources */,
+				337CA64E2856758F00170DE8 /* BaseInteractor.swift in Sources */,
+				337CA63F2856720E00170DE8 /* AstronomyViewController.swift in Sources */,
+				337CA637285671BE00170DE8 /* AstronomyInfo.swift in Sources */,
+				337CA644285674D900170DE8 /* LoadingViewController.swift in Sources */,
 				337CA6062856649300170DE8 /* SceneDelegate.swift in Sources */,
+				337CA63D285671F900170DE8 /* AstronomyInteractor.swift in Sources */,
+				337CA63B285671E900170DE8 /* AstronomyPresenter.swift in Sources */,
+				337CA651285676EF00170DE8 /* UIViewController+Bundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +397,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		337CA6092856649300170DE8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				337CA60A2856649300170DE8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		337CA60E2856649500170DE8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,7 +535,6 @@
 				INFOPLIST_FILE = APOD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +561,6 @@
 				INFOPLIST_FILE = APOD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
