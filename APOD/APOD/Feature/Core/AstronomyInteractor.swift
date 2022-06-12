@@ -11,10 +11,20 @@ protocol AstronomyInteractorOutput: AnyObject {
 
 final class AstronomyInteractor: BaseInteractor, AstronomyInteractorInput {
     weak var presenter: AstronomyInteractorOutput?
+    private var service: AstronomyInfoProviding
 
-    override init() {
+    init(service: AstronomyInfoProviding) {
+        self.service = service
     }
 
     func restrieveInfo() {
+        service.getInfo { [weak self] result in
+            switch result {
+            case .success(let info):
+                self?.presenter?.didRetrieve(info: info)
+            case .failure(_):
+                self?.presenter?.onError()
+            }
+        }
     }
 }

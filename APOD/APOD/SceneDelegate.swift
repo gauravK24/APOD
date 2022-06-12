@@ -1,11 +1,5 @@
-//
-//  SceneDelegate.swift
-//  APOD
-//
-//  Created by Kumar, Gaurav (Agoda) on 12/06/22.
-//
-
 import UIKit
+import SecureNetworking
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,6 +15,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let viewController = AstronomyViewController.instantiate()
+
+        let providing = AstronomyService(network: NetworkService(session: URLSession.shared))
+        let interactor = AstronomyInteractor(service: providing)
+        let router = AstronomyRouter()
+        let presenter = AstronomyPresenter(interactor: interactor, router: router)
+        viewController.presenter = presenter
+        presenter.view = viewController
+        interactor.presenter = presenter
 
         let navigation = UINavigationController(rootViewController: viewController)
 

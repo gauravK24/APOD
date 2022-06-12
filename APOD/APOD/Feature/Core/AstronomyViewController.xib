@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AstronomyViewController" customModule="APOD" customModuleProvider="target">
             <connections>
+                <outlet property="descTextView" destination="hc7-f8-Q4L" id="uoM-vY-UI6"/>
+                <outlet property="imageView" destination="RXs-Cw-aAI" id="uVb-c6-VYr"/>
+                <outlet property="titleLbl" destination="2SK-LD-j7E" id="qir-dS-0vM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ZNg-v1-Pyp"/>
             </connections>
         </placeholder>
@@ -17,12 +20,49 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="1qY-0q-TCs">
+                    <rect key="frame" x="15" y="84" width="384" height="738"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SK-LD-j7E">
+                            <rect key="frame" x="170" y="0.0" width="44.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RXs-Cw-aAI">
+                            <rect key="frame" x="72" y="52.5" width="240" height="128"/>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-f8-Q4L">
+                            <rect key="frame" x="72" y="212.5" width="240" height="525.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1qY-0q-TCs" secondAttribute="bottom" constant="40" id="9yB-Ua-hkb"/>
+                <constraint firstItem="1qY-0q-TCs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NSR-Q4-wFT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1qY-0q-TCs" secondAttribute="trailing" constant="15" id="iot-e5-awW"/>
+                <constraint firstItem="1qY-0q-TCs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="p5B-5R-P18"/>
+                <constraint firstItem="1qY-0q-TCs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="wvH-Ux-BOU"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="147"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

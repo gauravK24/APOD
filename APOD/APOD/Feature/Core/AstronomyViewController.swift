@@ -31,6 +31,13 @@ class AstronomyViewController: UIViewController {
 
 extension AstronomyViewController: AstronomyViewInput {
     func show(info: AstronomyInfo?) {
+        if let info = info {
+            DispatchQueue.main.async {
+                self.titleLbl.text = info.title
+                self.imageView.downloadImage(from: info.image, defaultImage: nil)
+                self.descTextView.text = info.description
+            }
+        }
     }
 
     func showLoading() {

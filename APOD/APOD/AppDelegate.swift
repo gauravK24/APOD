@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  APOD
-//
-//  Created by Kumar, Gaurav (Agoda) on 12/06/22.
-//
-
 import UIKit
 
 @main
